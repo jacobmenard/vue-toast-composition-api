@@ -15,31 +15,40 @@
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent, ref, watch } from 'vue';
-  import {useToast} from './composables/useToast';
- 
-
-  export default defineComponent({
-    emits: [
-      'add-toast'
-    ],
-    setup(_, context) { 
-      
-      function addToast(typ: any) {
-        var toastType = typ,
+<script setup lang="ts">
+  import { ref } from 'vue';
+  
+  const emits = defineEmits([
+    'add-toast'
+  ])
+  
+  function addToast(typ: any) {
+    var toastType = typ,
         toastMsg = `This is an ${toastType}`,
         toastDur = 3000
 
-        context.emit('add-toast', toastType, toastMsg, toastDur)
-      }
+        emits('add-toast', toastType, toastMsg, toastDur)
+  }
+  
+  addToast
 
-      return {
-        addToast,
-      }
-    }
-  })
+  // export default defineComponent({
+  //   emits: [
+  //     'add-toast'
+  //   ],
+  //   setup(_, context) { 
+      
+  //     function addToast(typ: any) {
+  //       var toastType = typ,
+  //       toastMsg = `This is an ${toastType}`,
+  //       toastDur = 3000
 
+  //       context.emit('add-toast', toastType, toastMsg, toastDur)
+  //     }
 
-
+  //     return {
+  //       addToast,
+  //     }
+  //   }
+  // })
 </script>

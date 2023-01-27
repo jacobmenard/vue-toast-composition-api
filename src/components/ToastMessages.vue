@@ -35,15 +35,20 @@
   }
 </style>
 
-<script lang="ts">
-import { defineComponent, ref, watch } from 'vue';
+<script setup lang="ts">
+import { defineProps, ref, watch } from 'vue';
 
-export default defineComponent({
-    props: {
-        displayData: { default : [] }
-    },
-    setup(props) {
-
-    }
+const props = defineProps({
+  displayData: { default: [] }
 })
+
+
+// export default defineComponent({
+//     props: {
+//         displayData: { default : [] }
+//     },
+//     setup(props) {
+
+//     }
+// })
 </script>
