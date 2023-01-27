@@ -16,10 +16,6 @@ export function useToast() {
         return modToast
     })
 
-    watch(toastApi, function(newValue) {
-        console.log('t')
-    })
-
     function setAddedToast() {
         toastApi.value.push({
             type: toastType.value,
