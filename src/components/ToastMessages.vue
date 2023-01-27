@@ -36,7 +36,7 @@
 </style>
 
 <script setup lang="ts">
-import { defineProps, ref, watch } from 'vue';
+import { defineProps } from 'vue';
 import { injectionKeys } from '../constants/injectionKeys'
 
 const props = defineProps({
