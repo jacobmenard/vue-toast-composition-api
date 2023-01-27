@@ -12,13 +12,6 @@
       SHOW ERROR TOAST
     </button>
     
-    <!-- <div class="toast-main-container mx-7 max-h-screen min-h-screen w-60 overflow-x-hidden overflow-y-auto absolute right-0 top-0">
-      <transition-group tag="ul" name="list" class="container">
-        <div v-for="item in displayToast" :key="item" class="text-center my-4 py-3 rounded-lg mx-2 font-semibold text-white" :class="{'bg-sky-500 border border-sky-700 shadow-2xl' : item.type == 'info', 'bg-green-400 border border-green-700 shadow-2xl' : item.type == 'success', 'bg-red-600 border border-red-700 shadow-2xl' : item.type == 'error'}">
-          <span class="mx-4">{{ item.message }}</span>
-        </div>
-      </transition-group>
-    </div> -->
   </div>
 </template>
 
@@ -32,7 +25,6 @@
       'add-toast'
     ],
     setup(_, context) { 
-      // const { toastApi, toastType, toastMessage, toastDuration, displayToast, setAddedToast, updateAddedToast } = useToast();
       
       function addToast(typ: any) {
         var toastType = typ,
